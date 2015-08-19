@@ -12,6 +12,42 @@ a:hover,
 	color: $primary-orange-color;
 }
 
+.fields {
+	padding-bottom: 20px;
+	label {
+		display: inline-block;
+		width: 90px;
+		vertical-align: top;
+		padding-top: 2px;
+	}
+}
+
+.fields-decoration {
+	border: 1px solid #e6cfaf;
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 2px $primary-orange-color;
+	}
+}
+
+textarea {
+	width: 200px;
+	@extend .fields-decoration;
+}
+
+input[type="text"] {
+	width: 200px;
+	@extend .fields-decoration;
+}
+
+.semibold {
+	font-weight: 600;
+}
+
+.orange-color {
+	color: $primary-orange-color;
+}
+
 /* buttons setting */
 .btn {
 	display: inline-block;
@@ -77,6 +113,10 @@ a:hover,
 
 .btn-success span.space-arrow {
 	border-color: #199e54
+}
+
+.btn-send {
+	min-width: 110px!important;
 }
 
 span.space-arrow {
@@ -237,11 +277,19 @@ header {
 .content {
 	margin-top: 40px;
 	margin-bottom: 40px;
+	.title {
+		display: block;
+		color: #231f20;
+		font-size: 1.125em;
+		text-transform: uppercase;
+		font-weight: 600;
+		line-height: 1.8em;
+	}
 	.h1,
 	h1 {
 		padding: 0 0 0 15px;
 		margin: 15px 0;
-		font-size: 2em;
+		font-size: 1.800em;
 		text-transform: uppercase;
 		color: #232020;
 		border-left: 3px solid $primary-orange-color;
@@ -251,15 +299,9 @@ header {
 	}
 }
 
-.main-content {
+.main-content,
+.list {
 	padding: 10px;
-	.title {
-		color: #231f20;
-		font-size: 1.125em;
-		text-transform: uppercase;
-		font-weight: 600;
-		line-height: 1.8em;
-	}
 	&>ul{
 		padding-left: 20px;
 		color: $primary-orange-color;
@@ -284,9 +326,12 @@ header {
 	}
 }
 
-.orange-color {
-	font-weight: 600;
-	color: $primary-orange-color;
+.contact-us {
+	p {
+		span {
+			display: block;
+		}
+	}
 }
 
 .group-info {

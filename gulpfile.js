@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    notify = require("gulp-notify"),
     watch = require('gulp-watch'),
     prefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
@@ -62,7 +63,8 @@ gulp.task('html:build', function () {
     gulp.src(path.src.html) 
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
-        .pipe(reload({stream: true}));
+        .pipe(reload({stream: true}))
+        .pipe(notify('Html task has done!'));
 });
 
 gulp.task('js:build', function () {
@@ -86,7 +88,8 @@ gulp.task('style:build', function () {
         .pipe(cssmin())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
-        .pipe(reload({stream: true}));
+        .pipe(reload({stream: true}))
+        .pipe(notify('Css task has done!'));
 });
 
 gulp.task('image:build', function () {
