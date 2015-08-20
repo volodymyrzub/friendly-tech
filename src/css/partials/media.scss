@@ -41,10 +41,40 @@
 	.navbar-nav>li>a {
 		padding: 10px 7px;
 	}
+
+	.become-partner-page {
+		.fields {
+			textarea {
+				width: 100%;
+				max-width: 565px;
+			}
+		}
+	}
+
 }
 
 @media (min-width: 992px) {
 	.navbar-nav>li>a {
 		padding: 10px 15px;
+	}
+
+	.become-partner-page {
+		.fields {
+			textarea {
+				width: 100%;
+				max-width: 675px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.become-partner-page {
+		.fields {
+			textarea {
+				width: 100%;
+				max-width: 775px;
+			}
+		}
 	}
 }

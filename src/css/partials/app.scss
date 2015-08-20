@@ -24,6 +24,14 @@ a:hover,
 	color: $primary-orange-color;
 }
 
+.become-partner-page {
+	.fields {
+		label {
+			width: 170px;
+		}
+	}
+}
+
 .fields {
 	padding-bottom: 20px;
 	label {
@@ -31,6 +39,9 @@ a:hover,
 		width: 90px;
 		vertical-align: top;
 		padding-top: 2px;
+	}
+	textarea {
+		width: 200px;
 	}
 }
 
@@ -51,6 +62,46 @@ input[type="text"] {
 	width: 200px;
 	@extend .fields-decoration;
 }
+
+select {
+	width: 200px;
+	@extend .fields-decoration;
+}
+
+// list-checkbox
+	.list-checkbox {
+		list-style: none;
+		padding: 10px 0;
+		margin: 0;
+		line-height: 2em;
+		&>li {
+			label {
+				padding-left: 25px;
+				position: relative;
+				font-weight: normal;
+			}
+			label:hover {
+				cursor: pointer;
+			}
+			input[type="checkbox"] {
+				display: none;
+			}
+			input[type="checkbox"] + label:before {
+				content: '';
+				left: 0;
+				top: 08px;
+				background-image: url(../img/checkbox.png);
+				background-repeat: no-repeat;
+				height: 16px;
+				width: 16px;
+				position: absolute;
+			}
+			input[type="checkbox"]:checked + label:before {
+				background-position: 0 -18px;
+			}
+		}
+	}
+// end list-checkbox
 
 .semibold {
 	font-weight: 600;
@@ -160,7 +211,7 @@ span.space-arrow .glyphicon {
 	padding-bottom: 13px;
 	padding-left: 30px;
 	font-size: .875em;
-	height: 50px;
+	min-height: 50px;
 	padding-top: 25px;
 	a {
 		color: $primary-orange-color;
