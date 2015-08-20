@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     cssmin = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
+    // pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
@@ -89,17 +89,17 @@ gulp.task('style:build', function () {
         .pipe(reload({stream: true}));
 });
 
-gulp.task('image:build', function () {
-    gulp.src(path.src.img) 
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
-        .pipe(gulp.dest(path.build.img))
-        .pipe(reload({stream: true}));
-});
+// gulp.task('image:build', function () {
+//     gulp.src(path.src.img) 
+//         .pipe(imagemin({
+//             progressive: true,
+//             svgoPlugins: [{removeViewBox: false}],
+//             use: [pngquant()],
+//             interlaced: true
+//         }))
+//         .pipe(gulp.dest(path.build.img))
+//         .pipe(reload({stream: true}));
+// });
 
 gulp.task('fonts:build', function() {
     gulp.src(path.src.fonts)
@@ -110,8 +110,8 @@ gulp.task('build', [
     'html:build',
     'js:build',
     'style:build',
-    'fonts:build',
-    'image:build'
+    'fonts:build'
+    // 'image:build'
 ]);
 
 
@@ -125,9 +125,9 @@ gulp.task('watch', function(){
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
     });
-    watch([path.watch.img], function(event, cb) {
-        gulp.start('image:build');
-    });
+    // watch([path.watch.img], function(event, cb) {
+    //     gulp.start('image:build');
+    // });
     watch([path.watch.fonts], function(event, cb) {
         gulp.start('fonts:build');
     });
