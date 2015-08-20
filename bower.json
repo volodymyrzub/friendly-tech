@@ -16,7 +16,8 @@
   "dependencies": {
     "normalize.css": "*",
     "jquery": "2.*",
-    "bootstrap": "3.3.*"
+    "bootstrap": "3.3.*",
+    "owl.carousel": "2.0.0"
 
   }
 }
