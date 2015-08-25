@@ -28,6 +28,9 @@ a:hover,
 	.fields {
 		label {
 			width: 170px;
+			span{
+				color: red;
+			}
 		}
 	}
 }
@@ -115,7 +118,7 @@ select {
 .btn {
 	display: inline-block;
 	min-width: 240px;
-	padding: 6px 50px 6px 15px;
+	padding: 7px 50px 4px 15px;
 	margin-bottom: 0;
 	font-size: 16px;
 	font-weight: 600;
@@ -593,6 +596,12 @@ header {
 	}
 }
 
+.copyright {
+	margin-top: 15px;
+	text-align: right;
+	color: #777;
+}
+
 .images-logo {
 	text-align: right;
 	img {
@@ -622,7 +631,7 @@ header {
 					color: rgb(255, 255, 255);
 					border-left: 4px solid #fff;
 					font-size: 32px;
-					font-family: "OpenSans";
+					font-family: "Open Sans", sans-serif;
 					text-transform: uppercase;
 					text-align: left;
 					text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.114);
@@ -684,9 +693,6 @@ header {
 				&:hover {
 					background: #0E3C80;
 				}
-				a {
-					margin-top: 13px;
-				}
 			}
 			&:nth-child(4) {
 				background: #41B7C7;
@@ -709,6 +715,8 @@ header {
 
 			a {
 				display: block;
+				padding-right: 5px;
+				padding-left: 5px;
 				color: #fff;
 				text-decoration: none;
 				-webkit-transform: skew(15deg);
